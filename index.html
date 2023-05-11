@@ -4,24 +4,32 @@
   <title>Meu Site</title>
   <style>
     body {
-      font-family: "Comic Sans MS", cursive, sans-serif;
+      background-color: white;
+      transition: background-color 0.3s ease;
     }
 
-    .image-container {
-      width: 300px; /* Ajuste a largura desejada */
-      margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    }
-
-    .image-container img {
-      width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
-      display: block; /* Remove espaços em branco abaixo da imagem */
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
     }
   </style>
+  <script>
+    function inverterCor() {
+      var body = document.querySelector('body');
+      var corAtual = window.getComputedStyle(body).backgroundColor;
+
+      if (corAtual === 'rgb(255, 255, 255)') {
+        body.style.backgroundColor = 'black';
+      } else {
+        body.style.backgroundColor = 'white';
+      }
+    }
+  </script>
 </head>
 <body>
   <h1>Bem-vindo ao Meu Site</h1>
-  <div class="image-container">
-    <img src="https://www.infoescola.com/wp-content/uploads/2019/07/mapa-do-brasil-legendado-pintado-regioes.jpg" alt="Descrição da imagem">
+  <div class="button-container">
+    <button onclick="inverterCor()">Inverter Cor</button>
   </div>
   <p>Este é um exemplo de um site simples.</p>
 </body>
