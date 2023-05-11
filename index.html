@@ -15,28 +15,35 @@
     .image-container img {
       width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
       display: block; /* Remove espaços em branco abaixo da imagem */
-      transition: filter 0.3s ease; /* Adiciona transição suave para a inversão de cores */
+      transition: opacity 0.3s ease; /* Adiciona transição suave para a troca de imagens */
     }
 
     .button-container {
       text-align: center;
       margin-top: 20px;
     }
+
+    .button-container button {
+      margin: 5px;
+    }
   </style>
   <script>
-    function inverterCor() {
+    function alterarImagem(url) {
       var imagem = document.querySelector('.image-container img');
-      imagem.classList.toggle('invertida');
+      imagem.src = url;
     }
   </script>
 </head>
 <body>
   <h1>Bem-vindo ao Meu Site</h1>
   <div class="image-container">
-    <img src="https://www.infoescola.com/wp-content/uploads/2019/07/mapa-do-brasil-legendado-pintado-regioes.jpg" alt="Descrição da imagem">
+    <img src="URL_DA_IMAGEM_INICIAL" alt="Descrição da imagem">
   </div>
   <div class="button-container">
-    <button onclick="inverterCor()">Inverter Cor da Imagem</button>
+    <button onclick="alterarImagem('URL_DA_IMAGEM_01')">Opção 01</button>
+    <button onclick="alterarImagem('URL_DA_IMAGEM_02')">Opção 02</button>
+    <button onclick="alterarImagem('URL_DA_IMAGEM_03')">Opção 03</button>
+    <button onclick="alterarImagem('URL_DA_IMAGEM_04')">Opção 04</button>
   </div>
   <p>Este é um exemplo de um site simples.</p>
 </body>
